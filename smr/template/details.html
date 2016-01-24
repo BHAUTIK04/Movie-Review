@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
+		<title>{{movie}}</title>
+	</head>
+	<body class = 'detail'>
+		<h1>{{ movie }}</h1>
+		<table class="table table-bordered table-hover">
+			<tr>
+				<td><b>Director</b>	</td>
+				<td>{{movie.director}}</td>
+			</tr>
+			<tr>
+				<td><b>Genre</b></td>
+				<td>{{movie.genre}}</td>
+			</tr>
+			<tr>
+				<td><b>99Popularity</b></td>
+				<td>{{movie.popularity}}</td>
+			</tr>
+			<tr>
+				<td><b>IMDB Score</b></td>
+				<td>{{movie.imdb_score}}</td>
+			</tr>
+		</table>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+	</body>
+</html>
